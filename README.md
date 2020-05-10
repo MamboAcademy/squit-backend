@@ -1,5 +1,3 @@
-# squit-backend
-Banckend of Squit app, intended to split expenses between Mambos
 # ☕🚀 SQUIT-backend
 
 > ⚡ Start your Java projects as fast as possible
