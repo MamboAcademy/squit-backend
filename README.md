@@ -7,9 +7,10 @@
 
 ## ℹ️ Introduction
 
-This is a repository intended to serve as a starting point if you want to bootstrap a Java project with JUnit and Gradle.
+Squit appplication will be an application done by MamboAcademy team in order to split expenses between friends.
 
-Here you have the [course on CodelyTV Pro where we explain step by step all this](https://pro.codely.tv/library/ddd-en-java/about/?utm_source=github&utm_medium=social&utm_campaign=readme) (Spanish)
+## ℹ️ Boot Application
+
 
 ## 🏁 How To Start
 #### Ubuntu
@@ -27,32 +28,6 @@ Here you have the [course on CodelyTV Pro where we explain step by step all this
     2. Run the tests and plugins verification tasks: `make test`
 6. Start developing!
 
-## ☝️ How to update dependencies
-
-* Gradle ([releases](https://gradle.org/releases/)): `./gradlew wrapper --gradle-version=WANTED_VERSION --distribution-type=bin`
-
-## 💡 Related repositories
-
-### ☕ Java
-
-* 📂 [Java Basic Skeleton](https://github.com/CodelyTV/java-basic-skeleton)
-* ⚛ [Java OOP Examples](https://github.com/CodelyTV/java-oop-examples)
-* 🧱 [Java SOLID Examples](https://github.com/CodelyTV/java-solid-examples)
-* 🥦 [Java DDD Example](https://github.com/CodelyTV/java-ddd-example)
-
-### 🐘 PHP
-
-* 📂 [PHP Basic Skeleton](https://github.com/CodelyTV/php-basic-skeleton)
-* 🎩 [PHP DDD Skeleton](https://github.com/CodelyTV/php-ddd-skeleton)
-* 🥦 [PHP DDD Example](https://github.com/CodelyTV/php-ddd-example)
-
-### 🧬 Scala
-
-* 📂 [Scala Basic Skeleton](https://github.com/CodelyTV/scala-basic-skeleton)
-* ⚡ [Scala Basic Skeleton (g8 template)](https://github.com/CodelyTV/scala-basic-skeleton.g8)
-* ⚛ [Scala Examples](https://github.com/CodelyTV/scala-examples)
-* 🥦 [Scala DDD Example](https://github.com/CodelyTV/scala-ddd-example)
-
 ## Docker
 
 The Dockerfile is a file that is used as an input for Docker to build a virtual environment 
@@ -60,3 +35,7 @@ The Dockerfile is a file that is used as an input for Docker to build a virtual 
 
 The requirements the application needs arte stored in requirements.txt. This file is to import these requirements 
 when our docker runs.
+
+To create the Dockerfile image: `docker build -t squit-backend:1.0 .`
+
+
