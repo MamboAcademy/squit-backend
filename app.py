@@ -71,9 +71,9 @@ def create_user():
     print(data)
     # hashed_password = generate_password_hash(data['password'], method='sha256')
     user_exist = Users.query.filter_by(user=data['user']).first()
-    if user_exist == None:
+    if user_exist is None:
         new_user = Users(idUser=str(uuid.uuid4()), name=data['name'], surname=data['surname'], user=data['user'],
-                        password=data['password'], email=data['email'], phone=data['phone'])
+                         password=data['password'], email=data['email'], phone=data['phone'])
         db.session.add(new_user)
         db.session.commit()
         return make_response(jsonify({'message': 'Nuevo usuario creado'}))
@@ -113,10 +113,7 @@ def get_all_users(current_user):
     users = Users.query.all()
     output = []
     for user in users:
-        user_data = {}
-        user_data['name'] = user.name
-        user_data['image'] = user.userImage
-        user_data['email'] = user.email
+        user_data = {'name': user.name, 'image': user.userImage, 'email': user.email}
         output.append(user_data)
 
     print(output)
@@ -129,8 +126,8 @@ def create_event(current_user):
     data = request.get_json(force=True)
     print(data)
     new_event = Events(idEvent=str(uuid.uuid4()), eventName=data['eventName'],
-                      eventDate=datetime.datetime.strptime(data['eventDate'], '%d-%m-%Y'),
-                      eventDescription=data['eventDescription'], eventImage=data['eventImage'])
+                       eventDate=datetime.datetime.strptime(data['eventDate'], '%d-%m-%Y'),
+                       eventDescription=data['eventDescription'], eventImage=data['eventImage'])
     db.session.add(new_event)
     db.session.commit()
     id_event = new_event.idEvent

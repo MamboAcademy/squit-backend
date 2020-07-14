@@ -1,5 +1,5 @@
 dbuser = 'root'
 # dbpass_mysql= '14.12.94.alB'
 dbpass= 'Mambo94'
-dbhost = 'localhost:3307'
-dbname = 'test'
+dbhost = 'localhost:3306'
+dbname = 'Squit'

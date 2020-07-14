@@ -12,8 +12,13 @@ This is a repository intended to serve as a starting point if you want to bootst
 Here you have the [course on CodelyTV Pro where we explain step by step all this](https://pro.codely.tv/library/ddd-en-java/about/?utm_source=github&utm_medium=social&utm_campaign=readme) (Spanish)
 
 ## 🏁 How To Start
-
-1. Install Java 8: `brew cask install corretto8`
+#### Ubuntu
+1. Install Python 3.8
+    `sudo apt update`
+    `sudo apt install software-properties-common`
+    `sudo add-apt-repository ppa:deadsnakes/ppa`
+    `sudo apt install python3.8`
+    `python3.8 --version`
 2. Set it as your default JVM: `export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home'`
 3. Clone this repository: `git clone https://github.com/CodelyTV/java-ddd-skeleton`.
 4. Bring up the Docker environment: `make up`.
@@ -47,3 +52,11 @@ Here you have the [course on CodelyTV Pro where we explain step by step all this
 * ⚡ [Scala Basic Skeleton (g8 template)](https://github.com/CodelyTV/scala-basic-skeleton.g8)
 * ⚛ [Scala Examples](https://github.com/CodelyTV/scala-examples)
 * 🥦 [Scala DDD Example](https://github.com/CodelyTV/scala-ddd-example)
+
+## Docker
+
+The Dockerfile is a file that is used as an input for Docker to build a virtual environment 
+(the same as our PC) with all the software it needs and also all the "environmental" requirements.
+
+The requirements the application needs arte stored in requirements.txt. This file is to import these requirements 
+when our docker runs.

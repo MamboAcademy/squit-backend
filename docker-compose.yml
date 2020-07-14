@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  app:
+    image: squit-backend
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - 4000:4000
+    environment:
+      DATABASE_URI: "mysql+pymysql://{0}:{1}@{2}/{3}".format(secrets.dbuser, secrets.dbpass, secrets.dbhost, secrets.dbname)
+    depends_on:
+      - "db"
+  db:
+    image: mariadb:10.4.10
+    environment:
+      MYSQL_ROOT_PASSWORD: Mambo94
+      MYSQL_DATABASE: test
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Mambo94
+    ports:
+      - 3307:3307
